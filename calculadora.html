@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"> </script>
+    <title>Provas e Metas - Trote 2026</title>
+</head>
+<body>
+    <nav class="menu"> <!-- Menu de navegação -->
+            <div class="menu-container">
+                <a href="index.html" class="menu-logo"> Trote 2026 </a>
+                <ul class="lista">
+                    <li> <a href="index.html"> Início </a> </li>
+                    <li> <a href="introducao.html"> Introdução </a> </li>
+                    <li> <a href="formato.html"> Formato </a> </li>
+                    <li> <a href="equipes.html"> Equipes </a> </li>
+                    <li> <a href="provas.html"> Provas e Metas </a> </li>
+                    <li> <a href="integracao.html"> Integração </a> </li>
+                    <li> <a href="cronograma.html"> Cronograma </a> </li>
+                    <li> <a href="calculadora.html"> Calculadora </a> </li>
+                </ul>
+            </div>
+    </nav>
+    <main class="principal">
+       <section>
+            <h3> Simulador de Metas Batidas </h3>
+            <div>
+                <div class="form-group">
+                    <label> Selecione a cor da equipe </label>
+                    <select id="cor">
+                        <option value="amarela"> Amarela </option>
+                        <option value="cinza"> Cinza </option>
+                        <option value="laranja"> Laranja </option>
+                        <option value="marron"> Marron </option>
+                        <option value="preta"> Preta </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label> Kit de alimentação </label> <!-- rótulo da caixa de entrada -->
+                    <input type="number" id="kitAlimentacao" min="0"> <!-- caixa de entrada -->
+                </div>
+                <div class="form-group">
+                    <label> Suplemento </label> <!-- rótulo da caixa de entrada -->
+                    <input type="number" id="qtdeLatas" min="0"> <!-- caixa de entrada -->
+                </div>  
+                <div class="form-group">
+                    <label> Leite </label> <!-- rótulo da caixa de entrada -->
+                    <input type="number" id="qtdeLeites" min="0"> <!-- caixa de entrada -->
+                </div>
+                <div class="form-group">
+                    <label> Doação de sangue (30 doações) </label> <!-- rótulo da caixa de entrada -->
+                    <input type="number" id="qtdeDoacoes" min="0"> <!-- caixa de entrada -->
+                </div>  
+            </div>
+       </section> 
+       <section>
+        <h3> 🧮 Simulador de Pontos - Itens avulsos</h3>
+        <div class="form-grid"> 
+            <div class="form-group">
+                <label> Arroz (5kg) - 10 pts </label> <!-- rótulo da caixa de entrada -->
+                <input type="number" id="qtdeArroz" min="0"> <!-- caixa de entrada -->
+            </div> 
+            <div class="form-group">
+                <label> Feijão (2kg) - 8 pts </label>
+                <input type="number" id="qtdeFeijao" min="0">
+            </div> 
+            <div class="form-group">
+                <label> Óleo de Soja (900 Ml) - 4 pts </label>
+                <input type="number" id="qtdeOleo" min="0">
+            </div>     
+             <div class="form-group">
+                <label> Pacote de macarrão (500g) - 2 pts </label>
+                <input type="number" id="qtdeMacarrao" min="0">
+            </div>      
+        </div>
+       </section>
+       <section>
+            <!-- quando este botão for clicado, a função calcular() será chamada no JavaScript -->
+            <button onclick="calcular()"> Calcular Total da Equipe </button> 
+            <div id="resultado" class="resultado-box">
+                Pontuação total: 0 pontos
+            </div>
+       </section>
+    </main>
+    <footer>
+        <p>Coordenação Trote Solidário 2026: trotesolidario@facef.br </p>
+        <p>Uni-FACEF - Centro Universitário Municipal de Franca </p>
+    </footer>
+</body>
+</html>
