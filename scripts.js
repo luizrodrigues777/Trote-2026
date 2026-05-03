@@ -35,6 +35,21 @@ function calcular(){
     else if (cor == "preta"){
         metaKit = 60
     }
+    if (cor == "amarela"){
+    metaKit = 54
+    }
+    else if (cor == "cinza"){
+    metaKit = 51
+    }
+    else if (cor == "laranja"){
+    metaKit = 21
+    }
+    else if (cor == "marron"){
+    metaKit = 88
+    }
+    else if (cor == "preta"){
+    metaKit = 60
+    }
     // calcula meta do suplemento e do leite
     let metaSuplemento // declaração meta de suplemento
     let metaLeite = metaKit // meta do leite é a meta do kit
@@ -50,7 +65,7 @@ function calcular(){
     let kitAlimentacao = Number(document.getElementById("kitAlimentacao").value)
     if (kitAlimentacao >= metaKit) {
         pontos = pontos + 5000 // já garantimos 5000
-        if (kitAlimentacao > metaProva1){
+        if (kitAlimentacao > metaKit){
             // ganhamos 83.33 a mais de ponto por itens que ultrapassaram 60
             pontos = pontos + (kitAlimentacao - metaKit) * (5000/metaKit)
         }
@@ -70,12 +85,27 @@ function calcular(){
         pontos = pontos + (qtdeLatas * (5000/metaSuplemento))
     }
     // calcula pontuação do leite
-    let qtdeLeite = Number(document.getElementById("qtdeLeite").value)
-    // fazer os ifs
-
+    let qtdeLeite = Number(document.getElementById("qtdeLeites").value)
+    if (qtdeLeite >= metaLeite){
+    pontos = pontos + 5000
+    if (qtdeLeite> metaLeite){
+        pontos = pontos + (qtdeLeite - metaLeite) * (5000/metaLeite)
+    }
+    }
+    else  {
+        pontos = pontos + (qtdeLeite * (5000/metaLeite))
+    }
     // calcula pontuação do sangue
-    let qtdeDoacao = Number(document.getElementById("qtdeDoacao").value)
-    // fazer os ifs
+    let qtdeDoacao = Number(document.getElementById("qtdeDoacoes").value)
+    if (qtdeDoacao >= metaSangue){
+    pontos = pontos + 5000
+    if (qtdeDoacao > metaSangue){
+        pontos = pontos + (qtdeDoacao - metaSangue) * (5000/metaSangue)
+    }
+    }
+    else  {
+        pontos = pontos + (qtdeDoacao * (5000/metaSangue))
+    }
     // vamos exibir o resultado para o usuário
     document.getElementById("resultado").innerText = "Pontuação total: " + pontos.toFixed(2) + " pontos"
 }

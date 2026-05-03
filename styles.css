@@ -237,3 +237,50 @@ button {
     font-weight: bold;
     font-size: 1.2rem;
 }
+.box-cinza {
+    width: 25px; height: 25px;
+    border-radius: 4px;
+    background: gray;
+}
+
+.box-laranja {
+    width: 25px; height: 25px;
+    border-radius: 4px;
+    background: rgb(255, 145, 0);
+}
+
+.box-marrom {
+    width: 25px; height: 25px;
+    border-radius: 4px;
+    background: rgb(75, 54, 38);
+}
+
+.box-preta {
+    width: 25px; height: 25px;
+    border-radius: 4px;
+    background: rgb(0, 0, 0);
+}
+
+.box-roxa {
+    width: 25px; height: 25px;
+    border-radius: 4px;
+    background: rgb(138, 12, 143);
+}
+
+.box-verde {
+    width: 25px; height: 25px;
+    border-radius: 4px;
+    background: rgb(41, 196, 10);
+}
+
+.box-azul {
+    width: 25px; height: 25px;
+    border-radius: 4px;
+    background: rgb(3, 39, 245);
+}
+
+.box-vermelha {
+    width: 25px; height: 25px;
+    border-radius: 4px;
+    background: rgb(224, 7, 7);
+}
